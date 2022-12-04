@@ -12,10 +12,10 @@ public class PcBuilder {
         int programflag=0;
         while(programflag==0)
         { 
-            System.out.println("Press E to Start Order");
+            System.out.println("Press O to Start Order");
             System.out.println("Press Z to finish your Shopping.");
             String input = br.readLine();
-            if(input.equalsIgnoreCase("E"))
+            if(input.equalsIgnoreCase("O"))
             {   
                     
                     System.out.println("Please Give Choice of PC Type: ");
@@ -23,13 +23,13 @@ public class PcBuilder {
                     System.out.println("2.Intel i5 Regular PC");
                     System.out.println("3.Intel i7 Regular PC");
                     System.out.println("4.Intel i9 Regular PC");
-                    System.out.println("Press Q to leave order after ordering at least one product");
+                    System.out.println("Press E to leave order after ordering at least one product");
                     String inp2=br.readLine();
-                    if(inp2.equalsIgnoreCase("E"))
+                    if(inp2.equalsIgnoreCase("O"))
                     {
                         System.out.println("You are currently in an order and can not start a new one.");
                     }
-                    else if(inp2.equalsIgnoreCase("Q"))
+                    else if(inp2.equalsIgnoreCase("E"))
                         {
                             System.out.println("You can not exit now.No order Placed");
                         }
@@ -45,19 +45,19 @@ public class PcBuilder {
                         System.out.println("2.8 GB 2666 MHZ Ram");
                         System.out.println("3.2 GB Graphics Card");
                         System.out.println("4.4 GB Graphics Card");
-                        System.out.println("Press Q to leave order after ordering at least one product");
+                        System.out.println("Press E to leave order after ordering at least one product");
                         String inp1=br.readLine();
-                        if(inp1.equalsIgnoreCase("Q") && minorderflag==0)
+                        if(inp1.equalsIgnoreCase("E") && minorderflag==0)
                         {
                             System.out.println("You can not exit now.No order Placed");
                         }
-                        else if(inp1.equalsIgnoreCase("Q") && minorderflag!=0)
+                        else if(inp1.equalsIgnoreCase("E") && minorderflag!=0)
                         {
                             System.out.println("Order Placed waiting for new order.");
                             orders.add(pc);
                             subprogramflag=1;
                         }
-                        else if(inp1.equalsIgnoreCase("E"))
+                        else if(inp1.equalsIgnoreCase("O"))
                         {
                             System.out.println("You are currently in an order and can not start a new one.Finsh this one first.");
                         }
@@ -104,7 +104,7 @@ public class PcBuilder {
                         System.out.println("Invalid Input.");
                     }  
             }
-            else if(input.equalsIgnoreCase("Q"))
+            else if(input.equalsIgnoreCase("E"))
             {
                System.out.println("You do not have any current order.");
             }
