@@ -1,7 +1,7 @@
 public abstract class Engine {
     protected String type;
 
-    abstract void set_type();
+   
     
     void print_type()
     {
@@ -17,10 +17,7 @@ class HydrogenCell extends Engine{
     {
         type="Hydrogen Cell";
     }
-    void set_type()
-    {
-        type="Hydrogen Cell";
-    }
+    
 }
 class Electric extends Engine
 {
@@ -29,15 +26,12 @@ class Electric extends Engine
         type="Electric";
     }
 
-    void set_type()
-    {
-        type="Electric";
-    }
+   
 }
 class DemoEngine {
     public static void main(String[] args) {
         Engine eng = new HydrogenCell();
-        eng.set_type();
+        
         eng.print_type();
     }
 }

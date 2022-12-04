@@ -1,7 +1,6 @@
 public abstract class Color {
     protected String type;
 
-    abstract void set_type();
     
     void print_type()
     {
@@ -18,10 +17,7 @@ class Red extends Color
     {
         type="Red";
     }
-    void set_type()
-    {
-        type="Red";
-    }
+   
 }
 class Black extends Color
 {
@@ -29,10 +25,7 @@ class Black extends Color
     {
         type="Black";
     }
-    void set_type()
-    {
-        type="Black";
-    }
+   
 
 }
 class White extends Color
@@ -41,10 +34,7 @@ class White extends Color
     {
         type="White";
     }
-    void set_type()
-    {
-        type="White";
-    }
+   
 }
 class DemoColor 
 {
