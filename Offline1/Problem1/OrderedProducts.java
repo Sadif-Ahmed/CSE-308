@@ -51,7 +51,6 @@ public class OrderedProducts {
                 set_type("Ryzen 7 5700X Gaming PC"); 
                 addbaseProduct(new Motherboard());;
                 addbaseProduct(new HDDStorage());
-                addProduct(new CpuCooler());
                 addProduct(new Ryzen());
                 break;
             }
@@ -61,7 +60,7 @@ public class OrderedProducts {
                 addbaseProduct(new Motherboard());
                 addbaseProduct(new HDDStorage());
                 addProduct(new LowIntel());
-                addProduct(new LiquidCooler());
+                addProduct(new CpuCooler());
                 break;
             }
             case 3:
@@ -76,11 +75,11 @@ public class OrderedProducts {
             }
             case 4:
             {
-                set_type("Intel i9 PC");
+                set_type("Intel i9 Regular PC");
                 addbaseProduct(new Motherboard());
                 addbaseProduct(new HDDStorage());
                 addProduct(new HighIntel());
-                addProduct(new LiquidCooler());
+                addProduct(new DVD());
             }
         }
     }
