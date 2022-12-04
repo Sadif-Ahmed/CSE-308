@@ -1,8 +1,5 @@
 public abstract class Engine {
     protected String type;
-
-   
-    
     void print_type()
     {
         System.out.println("The Engine is: "+type);
