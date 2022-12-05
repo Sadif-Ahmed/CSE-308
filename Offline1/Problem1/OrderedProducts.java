@@ -80,6 +80,7 @@ public class OrderedProducts {
                 addbaseProduct(new HDDStorage());
                 addProduct(new HighIntel());
                 addProduct(new DVD());
+                break;
             }
         }
     }
