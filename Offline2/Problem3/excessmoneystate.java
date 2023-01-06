@@ -12,7 +12,7 @@ public class excessmoneystate implements state{
         // TODO Auto-generated method stub
         System.out.println("Your Submitted Cash is More than Necessary.");
         System.out.println("Returning Extra amount : "+(vm.getstoremoney()-vm.getprice()));
-        System.out.println("Proceeding to Deluvery Phase.");
+        System.out.println("Proceeding to Delivery Phase.");
         vm.resetstore();
         vm.setcurrstate(vm.getdeliverystate());
     }
