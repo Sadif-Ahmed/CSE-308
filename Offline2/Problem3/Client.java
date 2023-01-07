@@ -12,7 +12,7 @@ public class Client {
         br =new BufferedReader(new InputStreamReader(System.in));
         int stock=Integer.parseInt(br.readLine());
         vendingmachine vm = new vendingmachine(stock, price);
-        while(vm.getcurrstate()==vm.getstockoutstate())
+        while(vm.getcurrstate()!=vm.getstockoutstate())
         {
             vm.start();
         }
