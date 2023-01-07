@@ -14,7 +14,7 @@ public class shortmoneystate implements state{
     public void work() throws IOException{
         // TODO Auto-generated method stub
         
-        System.out.println("You are Short of Money.Amount needed: "+ (vm.getprice()-vm.getstoremoney()));
+        System.out.println("You are Short of Money.Amount Short: "+ (vm.getprice()-vm.getstoremoney()));
         System.out.println("Please Insert Cash Amount: ");
         BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
         int cashamount=0;
