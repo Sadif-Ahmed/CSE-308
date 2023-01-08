@@ -2,7 +2,7 @@ public class script {
     private int teacherid;
     private int studentid;
     private int marks;
-    private int status;
+    private int status;//re-examination status (1/2/3/4)
 
     public script(int teacherid,int studentid,int  marks)
     {
