@@ -7,25 +7,7 @@ public class Client {
     private static List<observer> removedobservers = new ArrayList<>();
     private static ABCserver abCserver = new ABCserver();
     private static BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
-    public static String getserverstate(int curr_state)
-    {
-        if(curr_state==1)
-        {
-            return "operational";
-        }
-        else if(curr_state==2)
-        {
-            return "partially down";
-        }
-        else if(curr_state==3)
-        {
-            return "fully down";
-        }
-        else 
-        {
-            return "";
-        }
-    }
+    
     public static void main(String[] args) throws IOException{
         String username;
         int menuchoice,typechoice,submenuchoice;
@@ -33,8 +15,8 @@ public class Client {
         while(true)
         {
             System.out.println("Menu");
-            System.out.println("Previous State : "+getserverstate(abCserver.getPrev_state()));
-            System.out.println("Current State : "+getserverstate(abCserver.getCurr_state()));
+            System.out.println("Previous State : "+abCserver.getserverstatestr(abCserver.getPrev_state()));
+            System.out.println("Current State : "+abCserver.getserverstatestr(abCserver.getCurr_state()));
 
             System.out.println("Choice of Options(Enter 1/2/3/4 for Selection):");
             System.out.println("1.Add User");
@@ -62,10 +44,10 @@ public class Client {
             System.out.println("1.Premium User");
             System.out.println("2.Regular User");
             typechoice=Integer.parseInt(br.readLine());
-            System.out.println(typechoice);
+           // System.out.println(typechoice);
             if(typechoice==1)
             {
-                System.out.println("xdd");
+                //System.out.println("xdd");
                 new premuser(abCserver, username);
             }
             else if(typechoice==2)

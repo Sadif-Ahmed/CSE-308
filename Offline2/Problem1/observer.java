@@ -2,6 +2,9 @@ import java.io.IOException;
 public abstract class observer {
     private ABCserver abcserver;
     private int state;
+    /*For Premium Users: Operational(1),Patial Usage Of 2 Servers(2),Full Usage of DEF(3)
+      For Regular Users: Operational(1),Partial Usage of ABC (2),Full USage Of DEF(3),No Service(4)
+     */
     private String name;
 
     public observer(ABCserver abcserver,String name)

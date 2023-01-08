@@ -11,6 +11,7 @@ public class ABCserver implements subject{
     {
         observers = new ArrayList<>();
         curr_state=1;
+        prev_state=0;
     }
     public void setCurr_state(int curr_state) throws IOException{
         this.prev_state=this.curr_state;
@@ -55,6 +56,29 @@ public class ABCserver implements subject{
         {
             observers.remove(observers.get(flag));
             return true;
+        }
+    }
+    public String getserverstatestr(int curr_state)
+    {
+        if(curr_state==1)
+        {
+            return "Operational";
+        }
+        else if(curr_state==2)
+        {
+            return "Partially Down";
+        }
+        else if(curr_state==3)
+        {
+            return "Fully Down";
+        }
+        else if(curr_state==0) 
+        {
+            return "N/A";
+        }
+        else 
+        {
+            return "";
         }
     }
     @Override
