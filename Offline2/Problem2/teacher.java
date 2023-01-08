@@ -16,13 +16,14 @@ public class teacher extends participant {
 
         int indx = rand.nextInt(examscripts.size());
         for(int i=0;i<examscripts.size();i++)
-        {
+        {   //Guaranted Error
             if(i==indx)
             {
                 marksheets.add(examscripts.get(i).getmarks()+8);
                 continue;
             }
             int randnum= rand.nextInt(10);
+            //50 Percent Error
             if(randnum %2 ==0)
             {
                 marksheets.add(examscripts.get(i).getmarks()-8);
@@ -79,7 +80,7 @@ public class teacher extends participant {
             return;
         }
         public void receive(exam examitems) {
-            // TODO Auto-generated method stub
+            
             System.out.println("Exam Script Received By Teacher#"+getparticipantid());
             examscript=examitems.getscripts().get(0);
             reexamine();

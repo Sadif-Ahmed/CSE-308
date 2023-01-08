@@ -8,7 +8,7 @@ public class exactmoneystate implements state {
     }
     @Override
     public void work() throws IOException{
-        // TODO Auto-generated method stub
+        
         System.out.println("Your Submitted Cash is Adequate.Proceeding to delivery Phase");
         vm.resetstore();
         vm.setcurrstate(vm.getdeliverystate());

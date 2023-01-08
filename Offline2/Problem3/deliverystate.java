@@ -9,7 +9,7 @@ public class deliverystate implements state {
     }
     @Override
     public void work() throws IOException {
-        // TODO Auto-generated method stub
+        
         System.out.println("You Product is delivered.");
         vm.reducestock();
         if(vm.getquantity()>0)

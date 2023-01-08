@@ -26,7 +26,6 @@ public class student extends participant {
     }
     @Override
     public void receive(exam examitems) {
-        // TODO Auto-generated method stub
         System.out.println("Exam Script Reviewed By Teacher#"+getparticipantid());
         examscript=examitems.getscripts().get(0);
         System.out.println(examscript);

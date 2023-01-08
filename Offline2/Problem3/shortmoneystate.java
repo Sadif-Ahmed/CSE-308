@@ -12,7 +12,7 @@ public class shortmoneystate implements state{
     }
     @Override
     public void work() throws IOException{
-        // TODO Auto-generated method stub
+
         
         System.out.println("You are Short of Money.Amount Short: "+ (vm.getprice()-vm.getstoremoney()));
         System.out.println("Please Insert Cash Amount: ");

@@ -10,7 +10,6 @@ public class nomoneystate implements state {
     }
     @Override
     public void work() throws IOException{
-        // TODO Auto-generated method stub
         BufferedReader br =new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Remaining Stock: "+vm.getquantity());
         System.out.println("Please Insert Cash Amount: ");

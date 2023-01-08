@@ -28,7 +28,7 @@ public class examcontroller implements mediator{
    
     @Override
     public void send(participant receiver, exam examitems) {
-        // TODO Auto-generated method stub
+        
         if(receiver instanceof student)
         {
             System.out.println("Re-examination Request received from student#"+receiver.getparticipantid());
