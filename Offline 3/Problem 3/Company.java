@@ -40,15 +40,17 @@ public class Company extends Component {
     }
     public void remove(Component component)
     {
+        System.out.println("Removing Manager "+component.get_name());
         managers.remove(component);
         component.parent=false;    
     }
     public void delete()
     {
-        System.out.println("Deleting Company"+name);
+        System.out.println("Deleting Company "+name);
         for(int i=0;i<managers.size();i++)
         {
             managers.get(i).delete();
+            managers.remove(i);
         }
     }
     public void details()

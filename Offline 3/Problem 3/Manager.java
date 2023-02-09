@@ -58,6 +58,7 @@ public class Manager extends Component{
     }
     public void remove(Component component)
     {
+        System.out.println("Removing Developer "+component.get_name());
         devs.remove(component);
         component.parent=false;
     }
@@ -67,6 +68,7 @@ public class Manager extends Component{
         for(int i=0;i<devs.size();i++)
         {
             devs.get(i).delete();
+            devs.remove(i);
         }
     }
     public void details()

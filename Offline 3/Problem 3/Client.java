@@ -23,8 +23,12 @@ public class Client {
         System.out.println("Give Project Name:");
         String project_name = br.readLine();
 
-        if(credentials.contains(manager_name)==false)
+        if(credentials.contains(manager_name) || credentials.contains(project_name))
         {   
+            System.out.println("The Name Already Exists.");
+        }
+        else
+        {
             credentials.add(manager_name);
             credentials.add(project_name);
             companies.get(0).add(new Manager(manager_name, project_name));
@@ -63,7 +67,7 @@ public class Client {
         }
         else
         {
-            System.out.println("This name Already Exists");
+            System.out.println("This Name Already Exists");
         }
             }
             else if(choice.equalsIgnoreCase("2"))
@@ -79,6 +83,12 @@ public class Client {
                 manager_name = br.readLine();
                 System.out.println("Give Project Name:");
                 project_name = br.readLine();
+                if(credentials.contains(project_name) || credentials.contains(manager_name))
+                {
+                    System.out.println("The Name Already Exists");
+                }
+                else
+                {
                 System.out.println("Choose Company:");
                 for(int i=0;i<companies.size();i++)
                 {  
@@ -86,7 +96,10 @@ public class Client {
                 }
                 company_choice = br.readLine();
                 companies.get(Integer.parseInt(company_choice)-1).add(new Manager(manager_name, project_name));
+                credentials.add(manager_name);
+                credentials.add(project_name);
             }
+        }
 
             }
             else if (choice.equalsIgnoreCase("3"))
@@ -115,6 +128,12 @@ public class Client {
                     String company_choice;
                     System.out.println("Give Developer Name: ");
                     developer_name=br.readLine();
+                    if(credentials.contains(developer_name))
+                    {
+                        System.out.println("The Name Already Exists.");
+                    }
+                    else
+                    {
                     System.out.println("Choose Company :");
                     for(int i=0;i<companies.size();i++)
                 {  
@@ -135,10 +154,12 @@ public class Client {
                     }
                     manager_choice=br.readLine();
                     companies.get(Integer.parseInt(company_choice)-1).get_child(Integer.parseInt(manager_choice)-1).add(new Developer(developer_name));
-
+                    credentials.add(developer_name);
                    }
                     }
+                
                 }
+            }
             }
             else if(choice.equalsIgnoreCase("4"))
             {
@@ -159,12 +180,14 @@ public class Client {
                             if(delete_choice.equalsIgnoreCase("1"))
                             {
                                 companies.get(i).delete();
+                                companies.remove(i);
                             }
                             
                         }
                         else
                         {
                             companies.get(i).delete();
+                            companies.remove(i);
                         }
                         break;
                     }
@@ -207,12 +230,14 @@ public class Client {
                             if(delete_choice.equalsIgnoreCase("1"))
                             {
                                 companies.get(Integer.parseInt(company_choice)-1).get_child(Integer.parseInt(manager_choice)-1).delete();
+                                companies.get(Integer.parseInt(company_choice)-1).remove(companies.get(Integer.parseInt(company_choice)-1).get_child(Integer.parseInt(manager_choice)-1));
                             }
 
                 }
                 else
                 {
-                    companies.get(Integer.parseInt(company_choice)-1).get_child(Integer.parseInt(manager_choice)-1).delete();
+                    companies.get(Integer.parseInt(company_choice)-1).remove(companies.get(Integer.parseInt(company_choice)-1).get_child(Integer.parseInt(manager_choice)-1));
+                    
                 }
                 
 
@@ -248,12 +273,13 @@ public class Client {
                 {
                 for(int i=0;i<companies.get(Integer.parseInt(company_choice)-1).get_child(Integer.parseInt(manager_choice)-1).get_dev_number();i++)
                 {
-                    System.out.println(companies.get(Integer.parseInt(company_choice)-1).get_child(Integer.parseInt(manager_choice)-1).get_child(i).get_name());
+                    System.out.println((i+1)+" "+companies.get(Integer.parseInt(company_choice)-1).get_child(Integer.parseInt(manager_choice)-1).get_child(i).get_name());
                 }
                 System.out.println("Choose Developer :");
                 String developer_choice;
                 developer_choice= br.readLine();
-                companies.get(Integer.parseInt(company_choice)-1).get_child(Integer.parseInt(manager_choice)-1).get_child(Integer.parseInt(developer_choice)-1).delete();
+                companies.get(Integer.parseInt(company_choice)-1).get_child(Integer.parseInt(manager_choice)-1).remove(companies.get(Integer.parseInt(company_choice)-1).get_child(Integer.parseInt(manager_choice)-1).get_child(Integer.parseInt(developer_choice)-1));
+                
             }
             }
 
