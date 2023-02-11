@@ -8,7 +8,8 @@ public class Impostoradapter implements Crewmatebase{
     public void work()
     {
         System.out.println("This is an Impostor Working in Disguise.\n");
-        impostor.work();
+        impostor.kill();
+        impostor.sabotage();
     }
     
 }

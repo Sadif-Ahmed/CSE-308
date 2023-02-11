@@ -16,7 +16,6 @@ public class Client {
         if(passenger instanceof Crewmatebase)
         {
             System.out.println("Crewmate Detected.Let him Work\n");
-            passenger.work();
         }
         else if(passenger instanceof Impostorbase)
         {

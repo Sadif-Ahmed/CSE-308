@@ -56,7 +56,7 @@ public class Company extends Component {
     public void details()
     {
         System.out.println("Company Name: "+name);
-        System.out.println("Number of Project Managers: "+managers.size());
+        System.out.println("Number of Projects: "+managers.size());
     }
     public void hierarchy()
     {

@@ -14,6 +14,7 @@ public class Client {
             double totalprice=0;
             for(int i=0;i<orders;i++)
             {
+            System.out.println("Order Number:"+ (i+1));    
             System.out.println("Please Input Choice of Base Cup(1/2/3/4): ");
             System.out.println("1.Americano");
             System.out.println("2.Espresso");
