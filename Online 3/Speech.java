@@ -1,11 +1,19 @@
 public class Speech {
-    String s="";
+    String s;
+    Speech()
+    {
+        s="";
+    }
     void add_s(String str)
     {
-        s= s+str;
+        s+=str;
     }
     String get_s()
     {
         return s;
+    }
+    void set_s(String str)
+    {
+        s=str;
     }
 }
