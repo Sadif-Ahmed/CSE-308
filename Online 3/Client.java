@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 public class Client {
         public static void main(String[] args) throws IOException{
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("Please Enter The String:");
             String input = br.readLine();
             input = input.substring(1, input.length()-1);
             String [] inputs = input.split(" ");
